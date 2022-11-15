@@ -181,16 +181,18 @@ input {
 }
 
 .nav__list {
+  width: 80%;
   display: flex;
   flex-direction: row-reverse;
-  margin: -2px auto 0 auto;
+  justify-content: space-between;
+  margin: -2px 150px 0 auto;
 }
 
 .nav__link {
   float: right;
   height: 100%;
   line-height: 100px;
-  padding: 0 2rem;
+  padding: 0 1rem;
   color: var(--title-color);
   font-weight: var(--font-medium);
   position: relative;
