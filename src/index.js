@@ -56,6 +56,7 @@ linkWork.forEach(l => l.addEventListener("click", activeWork));
 /*===== Work Popup =====*/
 const workButtons = document.querySelectorAll(".work__button");
 const portfolioPopup = document.querySelector(".portfolio__popup");
+const portfolioPopupInner = document.querySelector(".portfolio__popup-inner");
 const portfolioPopupClose = document.querySelector(".portfolio__popup-close");
 
 function togglePortfolioPopup() {
@@ -70,6 +71,10 @@ workButtons.forEach(button =>
 );
 
 portfolioPopupClose.addEventListener("click", togglePortfolioPopup);
+portfolioPopup.addEventListener("click", togglePortfolioPopup);
+portfolioPopupInner.addEventListener("click", e => {
+  e.stopPropagation();
+});
 
 function portfolioItemDetails(portfolioItem) {
   document.querySelector(".pp__thumbnail img").src =
