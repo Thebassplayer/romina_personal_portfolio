@@ -305,15 +305,14 @@
       <h2 data-heading="My Portfolio" class="section__title">Recent Works</h2>
 
       <div class="work__filters">
-        <span class="work__item active-work">All</span>
-        <span class="work__item">Web</span>
-        <span class="work__item">App</span>
-        <span class="work__item">Design</span>
+        <span class="work__item active-work" data-filter="all">All</span>
+        <span class="work__item" data-filter=".web">Web</span>
+        <span class="work__item" data-filter=".app">App</span>
+        <span class="work__item" data-filter=".design">Design</span>
       </div>
 
       <div class="work__container container grid">
-
-        <div class="work__card">
+        <div class="work__card mix web">
           <img class="work__img" src="./assets/img/work-1.webp" alt="work__img">
           <h3 class="work__title">UX designer</h3>
           <span class="work__button">Demo
@@ -331,7 +330,7 @@
             </ul>
           </div>
         </div>
-        <div class="work__card">
+        <div class="work__card mix app">
           <img class="work__img" src="./assets/img/work-2.webp" alt="work__img">
           <h3 class="work__title">UX designer</h3>
           <span class="work__button">Demo
@@ -349,7 +348,7 @@
             </ul>
           </div>
         </div>
-        <div class="work__card">
+        <div class="work__card mix design">
           <img class="work__img" src="./assets/img/work-3.webp" alt="work__img">
           <h3 class="work__title">UX designer</h3>
           <span class="work__button">Demo
@@ -371,6 +370,32 @@
       </div>
     </section>
     <!-- Portfolio Popup -->
+    <div class="portfolio__popup">
+      <div class="portfolio__popup-inner">
+        <div class="portfolio__popup-content grid">
+          <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
+          <div class="pp__thumbnail">
+            <img src="./assets/img/work-2.webp" alt="" class="portfolio__popup-img">
+          </div>
+          <div class="portfolio__popup-info">
+            <div class="portfolio__popup-subtitle">Featured - <span>Design</span>
+              <div class="portfolio__popup-body">
+                <h3 class="details__title">The services provide for design</h3>
+                <p class="details__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quia
+                  esse
+                  nulla.</p>
+                <ul class="details__info">
+                  <li>Created - <span>a dec 2020</span></li>
+                  <li>Tecnologies - <span>html css</span></li>
+                  <li>Role - <span>UX designer</span></li>
+                  <li>View - <span><a href="3">www.google.com</a></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--===== Services =====-->
     <section class="services"></section>

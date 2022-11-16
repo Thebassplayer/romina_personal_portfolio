@@ -647,6 +647,19 @@ input {
 }
 
 /* Portfolio Popup */
+.portfolio__popup {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+}
 
 /*===== Services Section =====*/
 
