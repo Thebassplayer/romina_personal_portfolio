@@ -54,7 +54,31 @@ function activeWork() {
 linkWork.forEach(l => l.addEventListener("click", activeWork));
 
 /*===== Work Popup =====*/
+const workButtons = document.querySelectorAll(".work__button");
+const portfolioPopup = document.querySelector(".portfolio__popup");
+const portfolioPopupClose = document.querySelector(".portfolio__popup-close");
 
+function togglePortfolioPopup() {
+  portfolioPopup.classList.toggle("open");
+}
+
+workButtons.forEach(button =>
+  button.addEventListener("click", e => {
+    togglePortfolioPopup();
+    portfolioItemDetails(e.target.parentElement);
+  })
+);
+
+portfolioPopupClose.addEventListener("click", togglePortfolioPopup);
+
+function portfolioItemDetails(portfolioItem) {
+  document.querySelector(".pp__thumbnail img").src =
+    portfolioItem.querySelector(".work__img").src;
+  document.querySelector(".portfolio__popup-subtitle span").innerHTML =
+    portfolioItem.querySelector("work__title").innerHTML;
+  document.querySelector(".portfolio__popup-body").innerHTML =
+    portfolioItem.querySelector("portfolio__item-details").innerHTML;
+}
 /*=============== SERVICES MODAL ===============*/
 
 /*=============== SWIPER TESTIMONIAL ===============*/
