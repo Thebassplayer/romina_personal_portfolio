@@ -85,6 +85,46 @@ function portfolioItemDetails(portfolioItem) {
     portfolioItem.querySelector("portfolio__item-details").innerHTML;
 }
 /*=============== SERVICES MODAL ===============*/
+const modalViews = document.querySelectorAll(".services__modal"),
+  modalContent = document.querySelectorAll(".services__modal-content"),
+  modalBtns = document.querySelectorAll(".services__button"),
+  modalCloses = document.querySelectorAll(".services__modal-close");
+
+// Target proper modal when clicking View More button
+let modal = modalClick => {
+  modalViews[modalClick].classList.add("active__modal");
+};
+
+// View More event listeners
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener("click", () => {
+    modal(i);
+  });
+});
+
+// X close button functionality
+modalCloses.forEach(modalClose => {
+  modalClose.addEventListener("click", () => {
+    modalViews.forEach(modalView => {
+      modalView.classList.remove("active__modal");
+    });
+  });
+});
+
+// Modal close functionality
+modalViews.forEach(modalView => {
+  modalView.addEventListener("click", () => {
+    modalView.classList.remove("active__modal");
+  });
+});
+
+// Prevent closing when click on modal content
+
+modalContent.forEach(mContent => {
+  mContent.addEventListener("click", e => {
+    e.stopPropagation();
+  });
+});
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 
