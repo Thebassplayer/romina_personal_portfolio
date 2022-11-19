@@ -1072,16 +1072,88 @@ textarea.input {
   opacity: 1;
 }
 /*=============== FOOTER ===============*/
+.footer {
+  padding-block-start: 2rem;
+}
+
+.footer__container {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.6rem;
+}
+
+.footer__bg {
+  background-color: var(--box-color);
+  padding: 3rem 0 3.5rem;
+}
+
+.footer__title {
+  font-size: var(--h1-font-size);
+  margin-block-end: var(--mb-0-25);
+}
+
+.footer__subtitle {
+  font-size: var(--small-font-size);
+}
+
+.footer__links {
+  display: flex;
+  justify-self: center;
+  column-gap: 2rem;
+}
+
+.footer__link:hover {
+  color: var(--skin-color);
+}
+
+.footer__socials {
+  justify-self: flex-end;
+}
+
+.footer__social {
+  font-size: 1.25rem;
+  margin-inline-end: var(--mb-1-5);
+}
+
+.footer__social:hover {
+  color: var(--skin-color);
+}
+
+.footer__copy {
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  margin-block-start: 4.5rem;
+}
+
+.footer__title,
+.footer__subtitle,
+.footer__link,
+.footer__social {
+  color: var(--title-color);
+}
 
 /*=============== SCROLL UP ===============*/
 
 /* Show Scroll Up*/
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.5rem;
+}
 
 /*========== BREAKPOINTS ==========*/
 /* For Large Devices */
 @media screen and (max-width: 1408px) {
+  .container {
+    margin-inline-start: var(--mb-2-5);
+    margin-inline-end: var(--mb-2-5);
+  }
 }
 
 @media screen and (max-width: 1216px) {
