@@ -14,13 +14,15 @@ import "./assets/style/style.css";
 const navMenu = document.getElementById("sidebar"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close"),
-  navLinks = document.querySelectorAll(".nav__link");
+  navLinks = document.querySelectorAll(".nav__link"),
+  body = document.body;
 
 /*===== SIDEBAR SHOW =====*/
 /* Validate If Constant Exists */
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-sidebar");
+    PreventScrolling();
   });
 }
 
@@ -29,16 +31,29 @@ if (navToggle) {
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-sidebar");
+    PreventScrolling();
   });
 }
 
-/*===== SIDEBAR HIDDEN =====*/
 /*Close navMenu when clicking a navLink*/
 navLinks.forEach(navLink => {
   navLink.addEventListener("click", () => {
     navMenu.classList.remove("show-sidebar");
+    PreventScrolling();
   });
 });
+
+/*=============== SIDEBAR OTHER FUNCTIONALITIES ===============*/
+
+console.log(navMenu.classList.contains("show-sidebar"));
+
+function PreventScrolling() {
+  if (navMenu.classList.contains("show-sidebar")) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "";
+  }
+}
 
 /*=============== SKILLS TABS ===============*/
 const tabs = document.querySelectorAll("[data-target]"),
