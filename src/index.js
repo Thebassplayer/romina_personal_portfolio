@@ -43,9 +43,13 @@ navLinks.forEach(navLink => {
   });
 });
 
-/*=============== SIDEBAR OTHER FUNCTIONALITIES ===============*/
+/*Close navMenu when clicking on the modal*/
+navMenu.addEventListener("click", () => {
+  navMenu.classList.remove("show-sidebar");
+  PreventScrolling();
+});
 
-console.log(navMenu.classList.contains("show-sidebar"));
+/*=============== SIDEBAR OTHER FUNCTIONALITIES ===============*/
 
 function PreventScrolling() {
   if (navMenu.classList.contains("show-sidebar")) {
