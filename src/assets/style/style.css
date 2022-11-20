@@ -1158,8 +1158,34 @@ textarea.input {
 }
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  inset-inline-end: 2rem;
+  inset-block-end: -20%;
+  background-color: var(--skin-color);
+  opacity: 0.8;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.4rem;
+  z-index: 800;
+  transition: 0.3s;
+}
+
+.scrollup__icon {
+  color: var(--box-color);
+  font-size: 1.5rem;
+}
+
+.scrollup:hover {
+  background-color: transparent;
+}
+.scrollup:hover .scrollup__icon {
+  color: var(--skin-color);
+}
 
 /* Show Scroll Up*/
+.show-scrollup {
+  inset-block-end: 4rem;
+}
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {

@@ -248,4 +248,17 @@ function navHighlihter() {
   });
 }
 
-/*=============== SHOW SCROLL UP ===============*/
+/*=============== SHOW SCROLL UP BUTTON ===============*/
+const scrollUpBtn = document.getElementById("scroll-up");
+
+window.addEventListener("scroll", showScrollUpBtn);
+
+function showScrollUpBtn() {
+  let scrollY = window.pageYOffset;
+
+  if (scrollY > 500) {
+    scrollUpBtn.classList.add("show-scrollup");
+  } else {
+    scrollUpBtn.classList.remove("show-scrollup");
+  }
+}
