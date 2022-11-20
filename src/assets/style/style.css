@@ -1043,7 +1043,7 @@ textarea.input {
   font-size: 1rem;
   font-weight: var(--font-medium);
   pointer-events: none;
-  z-index: 1000;
+  z-index: 99;
   transition: 0.5s;
 }
 
@@ -1061,7 +1061,7 @@ textarea.input {
   font-size: var(--small-font-size);
   padding: 0 0.4rem;
   pointer-events: none;
-  z-index: 500;
+  z-index: 98;
 }
 
 .input__container span::before,
@@ -1249,6 +1249,7 @@ textarea.input {
 
   .nav__toggle {
     display: flex;
+    z-index: 998;
   }
 
   .main {
